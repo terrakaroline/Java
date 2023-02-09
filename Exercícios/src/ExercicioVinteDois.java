@@ -5,9 +5,12 @@ public class ExercicioVinteDois {
         float precoCusto;
         float precoVenda;
 
-        Scanner leitor = new Scanner(System.in);
+        float totalCusto = 0.0f;
+        float totalVenda = 0.0f;
 
-        for(int i = 0; i < 40; i++){
+        Scanner leitor = new Scanner(System.in);
+        int i = 0;
+        for(; i < 40; i++){
             System.out.println("Digite o nome do produto: ");
             nomeProduto = leitor.nextLine();
             System.out.println("Digite o preço de custo: ");
@@ -15,7 +18,24 @@ public class ExercicioVinteDois {
             System.out.println("Digite o preço de venda: ");
             precoVenda = leitor.nextFloat();
 
+            totalCusto = totalCusto + precoCusto;
+            totalVenda = totalVenda + precoVenda;
+            if(precoVenda == precoCusto) {
+                System.out.println("Houve um empate entre o preço de custo e de venda");
+            } else {
+                if(precoCusto > precoVenda) {
+                    System.out.println("Houve prejuízo");
+                } else{
+                    System.out.println("Houve lucro");
+                }
+            }
 
+            System.out.println(nomeProduto + ", preço de custo = " + precoCusto + ", preço de venda = " + precoVenda);
         }
+
+        System.out.println("A média do preço de custo é de: " + (totalCusto/i));
+        System.out.println("A média do preço de venda é de: " + (totalVenda/i));
+
+
     }
 }
