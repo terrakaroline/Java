@@ -17,8 +17,6 @@ public class Pessoa {
         return imc;
     }
 
-    
-
     //MÉTODOS ACESSORES
     public void setPeso(float peso){
         this.peso = peso;
