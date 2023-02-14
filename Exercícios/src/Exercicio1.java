@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ExercicioUm{
+public class Exercicio1{
     public static void main(String[] args) {
         try (Scanner leitor = new Scanner(System.in)) {
             System.out.println("Insira o primeiro numero: ");
